@@ -1,6 +1,7 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2018, The TurtleCoin Developers
 // Copyright (c) 2018, The Karai Developers
+// Copyright (c) 2018, MIMI Money
 // 
 // Please see the included LICENSE file for more information.
 
@@ -229,26 +230,26 @@ int main(int argc, char* argv[])
     // configure logging
     logManager.configure(buildLoggerConfiguration(cfgLogLevel, cfgLogFile));
 
-    logger(INFO, BRIGHT_GREEN) <<
+    logger(INFO, BRIGHT_RED) <<
 
       #ifdef _WIN32
-      "\n _______         _   _       _____      _        \n"
-              "|__   __|       | | | |     / ____|    (_)      \n"
-              "   | |_   _ _ __| |_| | ___| |     ___  _ _ __  \n"
-              "   | | | | | '__| __| |/ _ \\ |    / _ \\| | '_ \\ \n"
-              "   | | |_| | |  | |_| |  __/ |___| (_) | | | | |\n"
-      "   |_|\\__ _|_|   \\__|_|\\___|\\_____\\___/|_|_| |_|\n" << ENDL;
+      "\n                                                                            \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n" 
+		"\n                                                                            \n" << ENDL;
       #else
       "\n                                                                            \n"
-        "████████╗██╗  ██╗██████╗ ████████╗██╗    ██████╗ █████╗ █████╗ ██╗███╗   ██╗\n"
-        "╚══██╔══╝██║  ██║██╔══██╗╚══██╔══╝██║    ██╔═══╝██╔═══╝██╔══██╗██║████╗  ██║\n"
-        "   ██║   ██║  ██║██████╔╝   ██║   ██║    ████╗  ██║    ██║  ██║██║██╔██╗ ██║\n"
-        "   ██║   ██║  ██║██╔══██╗   ██║   ██║    ██╔═╝  ██║    ██║  ██║██║██║╚██╗██║\n"
-        "   ██║   ╚█████╔╝██║  ██║   ██║   ██████╗██████╗╚█████╗╚█████╔╝██║██║ ╚████║\n"
-        "   ╚═╝    ╚════╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝╚═════╝ ╚════╝ ╚════╝ ╚═╝╚═╝  ╚═══╝\n" << ENDL;
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n"
+        " MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI  MIMI \n" 
+		"\n                                                                            \n"<< ENDL;
       #endif
 
-    logger(INFO, BRIGHT_GREEN) << "Welcome to " << CryptoNote::CRYPTONOTE_NAME << " v" << PROJECT_VERSION_LONG;
+    logger(INFO, GREEN) << "Welcome to " << CryptoNote::CRYPTONOTE_NAME << " v" << PROJECT_VERSION_LONG;
 
     if (command_line_preprocessor(vm, logger)) {
       return 0;
